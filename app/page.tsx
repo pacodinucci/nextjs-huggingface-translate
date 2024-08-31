@@ -5,7 +5,7 @@ import { useState } from "react";
 import TextArea from "@/components/inputs/TextArea";
 
 export default function Home() {
-  const [sourceText, setSourceText] = useState("");
+  const [sourceText, setSourceText] = useState<string>("");
   return (
     <div>
       <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center">
@@ -26,7 +26,13 @@ export default function Home() {
                       id="source-language"
                       value={sourceText}
                       onChange={(e) => setSourceText(e.target.value)}
+                      placeholder="Source Language"
                     />
+                    <div className="flex flex-row justify-between w-full">
+                      <span className="cursor-pointer flex space-x-2 flex-row">
+                        
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
